@@ -5,11 +5,12 @@ import CommentDetail from './CommentDetail';
 
 
 const App = () => {
+    const avatar = faker.image.avatar();
     return (
         <div className="ui container comments">
-            <CommentDetail author="Sam" />
-            <CommentDetail author="Coco" />
-            <CommentDetail author="Stark" />
+            <CommentDetail author="Sam" timeAgo="Yesterday at 5:00PM" comment="Wooooo!!" avatar={avatar} />
+            <CommentDetail author="Coco" timeAgo="Today at 2:34PM" comment="Great post~" avatar={avatar} />
+            <CommentDetail author="Stark" timeAgo="Today at 3:45PM" comment="Nice!" avatar={avatar} />
         </div>
     );
 };
